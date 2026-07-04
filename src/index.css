@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Frank Ruhl Libre", serif;
+  --font-display: "David Libre", serif;
   --font-body: "Assistant", sans-serif;
 
-  --color-charcoal: #2b221d;
-  --color-charcoal-light: #3a2e27;
-  --color-cream: #f8f1e7;
-  --color-cream-dim: #ece0d0;
-  --color-copper: #c9a48c;
-  --color-copper-light: #d9bfa9;
-  --color-gold: #d9bd86;
-  --color-burgundy: #c97c67;
-  --color-stone: #9c8f82;
+  --color-charcoal: #3f4438;
+  --color-charcoal-light: #4c5142;
+  --color-cream: #faf6ec;
+  --color-cream-dim: #f1e8d6;
+  --color-copper: #c3a78c;
+  --color-copper-light: #d8c7b0;
+  --color-gold: #c98868;
+  --color-burgundy: #5c6b42;
+  --color-stone: #8b8272;
 }
 
 @layer base {

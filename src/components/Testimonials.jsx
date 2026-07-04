@@ -22,7 +22,7 @@ function ChevronButton({ direction, onClick, disabled, label }) {
       onClick={onClick}
       disabled={disabled}
       aria-label={label}
-      className="flex h-9 w-9 items-center justify-center border border-charcoal/15 bg-white text-charcoal transition-colors hover:border-gold hover:text-burgundy disabled:pointer-events-none disabled:opacity-30"
+      className="flex h-9 w-9 items-center justify-center rounded-full border border-charcoal/15 bg-white text-charcoal transition-colors hover:border-gold hover:text-burgundy disabled:pointer-events-none disabled:opacity-30"
     >
       <svg viewBox="0 0 20 20" className={`h-4 w-4 ${rotate}`} fill="none" stroke="currentColor" strokeWidth="1.75">
         <path d="M12 5l-5 5 5 5" strokeLinecap="round" strokeLinejoin="round" />
@@ -70,7 +70,7 @@ export default function Testimonials() {
           className="mt-10 grid auto-cols-[85vw] grid-flow-col gap-4 overflow-x-auto scroll-smooth pb-2 sm:auto-cols-[calc(20%-13px)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {testimonials.map((t) => (
-            <figure key={t.id} className="flex flex-col border border-charcoal/10 bg-white p-6">
+            <figure key={t.id} className="flex flex-col rounded-3xl border border-charcoal/10 bg-white p-6">
               <Stars />
               <blockquote className="mt-3 flex-1 text-sm leading-relaxed text-stone">&rdquo;{t.quote}&rdquo;</blockquote>
               <figcaption className="mt-4 text-sm">

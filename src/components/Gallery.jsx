@@ -14,7 +14,7 @@ export default function Gallery() {
           {gallery.map((g) => (
             <figure
               key={g.id}
-              className="relative aspect-square w-[70vw] max-w-[280px] shrink-0 snap-center overflow-hidden border border-charcoal/10 sm:w-auto sm:max-w-none"
+              className="relative aspect-square w-[70vw] max-w-[280px] shrink-0 snap-center overflow-hidden rounded-lg border border-charcoal/10 sm:w-auto sm:max-w-none"
             >
               <img
                 src={g.image}

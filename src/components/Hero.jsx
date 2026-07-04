@@ -31,13 +31,13 @@ export default function Hero() {
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
             href="#services"
-            className="flex h-[54px] w-full min-w-[220px] items-center justify-center bg-gold text-sm font-semibold tracking-wide text-charcoal transition-opacity hover:opacity-90 sm:w-auto"
+            className="flex h-[54px] w-full min-w-[220px] items-center justify-center rounded-3xl bg-gold text-sm font-semibold tracking-wide text-charcoal transition-opacity hover:opacity-90 sm:w-auto"
           >
             קביעת תור
           </a>
           <a
             href="#services"
-            className="flex h-[54px] w-full min-w-[220px] items-center justify-center border-2 border-cream/70 text-sm font-semibold tracking-wide text-cream transition-all hover:bg-cream hover:text-charcoal sm:w-auto"
+            className="flex h-[54px] w-full min-w-[220px] items-center justify-center rounded-3xl border-2 border-cream/70 text-sm font-semibold tracking-wide text-cream transition-all hover:bg-cream hover:text-charcoal sm:w-auto"
           >
             מחירון שירותים
           </a>

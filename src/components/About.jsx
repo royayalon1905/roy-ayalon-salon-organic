@@ -22,7 +22,7 @@ export default function About() {
           לא לפי תמונה שהבאת מאינסטגרם.
         </p>
 
-        <div className="mx-auto mt-8 inline-flex items-center gap-2 border border-charcoal/15 px-4 py-2">
+        <div className="mx-auto mt-8 inline-flex items-center gap-2 rounded-3xl border border-charcoal/15 px-4 py-2">
           <span className="font-display text-lg text-gold">{businessInfo.foundedYear}</span>
           <span className="text-sm text-stone">השנה בה הכל התחיל</span>
         </div>

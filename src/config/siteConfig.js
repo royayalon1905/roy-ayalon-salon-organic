@@ -92,18 +92,18 @@ export const siteConfig = {
 
   theme: {
     colors: {
-      charcoal: '#2b221d',
-      charcoalLight: '#3a2e27',
-      cream: '#f8f1e7',
-      creamDim: '#ece0d0',
-      copper: '#c9a48c',
-      copperLight: '#d9bfa9',
-      gold: '#d9bd86',
-      burgundy: '#c97c67',
-      stone: '#9c8f82',
+      charcoal: '#3f4438',
+      charcoalLight: '#4c5142',
+      cream: '#faf6ec',
+      creamDim: '#f1e8d6',
+      copper: '#c3a78c',
+      copperLight: '#d8c7b0',
+      gold: '#c98868',
+      burgundy: '#5c6b42',
+      stone: '#8b8272',
     },
     fonts: {
-      display: "'Frank Ruhl Libre', serif",
+      display: "'David Libre', serif",
       body: "'Assistant', sans-serif",
     },
     heroImage: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1920&h=1280&fit=crop&auto=format&q=80',

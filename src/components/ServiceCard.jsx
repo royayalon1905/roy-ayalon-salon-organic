@@ -16,7 +16,7 @@ export default function ServiceCard({ service, onBook }) {
   const badge = BADGE[service.audience]
 
   return (
-    <li className="group relative flex flex-col gap-4 border border-charcoal/10 bg-white px-6 py-5 transition-colors hover:border-gold hover:shadow-[0_4px_20px_-8px_rgba(217,189,134,0.5)] sm:flex-row sm:items-center sm:justify-between">
+    <li className="group relative flex flex-col gap-4 rounded-3xl border border-charcoal/10 bg-white px-6 py-5 transition-colors hover:border-gold hover:shadow-[0_4px_20px_-8px_rgba(201,136,104,0.5)] sm:flex-row sm:items-center sm:justify-between">
       {badge && (
         <span
           className={`absolute -top-2.5 right-5 rounded-full border px-2.5 py-0.5 text-[10px] font-semibold tracking-wide ${badge.className}`}

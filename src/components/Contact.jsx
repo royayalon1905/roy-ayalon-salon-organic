@@ -45,7 +45,7 @@ export default function Contact() {
         <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
           <div>
             {sent ? (
-              <div className="flex h-full flex-col items-center justify-center border border-gold/30 bg-charcoal p-10 text-center" role="status">
+              <div className="flex h-full flex-col items-center justify-center rounded-3xl border border-gold/30 bg-charcoal p-10 text-center" role="status">
                 <p className="font-display text-2xl text-cream">ההודעה נשלחה</p>
                 <p className="mt-2 text-stone">נחזור אליכם בהקדם. תודה שפניתם אלינו.</p>
                 <button
@@ -70,7 +70,7 @@ export default function Contact() {
                     onChange={(e) => update('name', e.target.value)}
                     aria-invalid={Boolean(errors.name)}
                     aria-describedby={errors.name ? `${nameId}-err` : undefined}
-                    className={`border bg-transparent px-3 py-2.5 text-charcoal placeholder:text-stone/50 focus:border-burgundy ${errors.name ? 'border-burgundy' : 'border-charcoal/20'}`}
+                    className={`rounded-xl border bg-transparent px-3 py-2.5 text-charcoal placeholder:text-stone/50 focus:border-burgundy ${errors.name ? 'border-burgundy' : 'border-charcoal/20'}`}
                     placeholder="השם שלך"
                   />
                   {errors.name && <p id={`${nameId}-err`} className="text-xs text-burgundy">{errors.name}</p>}
@@ -85,7 +85,7 @@ export default function Contact() {
                     onChange={(e) => update('contact', e.target.value)}
                     aria-invalid={Boolean(errors.contact)}
                     aria-describedby={errors.contact ? `${contactId}-err` : undefined}
-                    className={`border bg-transparent px-3 py-2.5 text-charcoal placeholder:text-stone/50 focus:border-burgundy ${errors.contact ? 'border-burgundy' : 'border-charcoal/20'}`}
+                    className={`rounded-xl border bg-transparent px-3 py-2.5 text-charcoal placeholder:text-stone/50 focus:border-burgundy ${errors.contact ? 'border-burgundy' : 'border-charcoal/20'}`}
                     placeholder="0501234567 או you@example.com"
                   />
                   {errors.contact && <p id={`${contactId}-err`} className="text-xs text-burgundy">{errors.contact}</p>}
@@ -100,7 +100,7 @@ export default function Contact() {
                     onChange={(e) => update('message', e.target.value)}
                     aria-invalid={Boolean(errors.message)}
                     aria-describedby={errors.message ? `${messageId}-err` : undefined}
-                    className={`border bg-transparent px-3 py-2.5 text-charcoal placeholder:text-stone/50 focus:border-burgundy ${errors.message ? 'border-burgundy' : 'border-charcoal/20'}`}
+                    className={`rounded-xl border bg-transparent px-3 py-2.5 text-charcoal placeholder:text-stone/50 focus:border-burgundy ${errors.message ? 'border-burgundy' : 'border-charcoal/20'}`}
                     placeholder="איך נוכל לעזור?"
                   />
                   {errors.message && <p id={`${messageId}-err`} className="text-xs text-burgundy">{errors.message}</p>}
@@ -108,7 +108,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="bg-charcoal px-7 py-3.5 text-sm font-bold text-cream transition-transform hover:-translate-y-0.5"
+                  className="rounded-3xl bg-charcoal px-7 py-3.5 text-sm font-bold text-cream transition-transform hover:-translate-y-0.5"
                 >
                   שליחת הודעה
                 </button>
@@ -117,7 +117,7 @@ export default function Contact() {
           </div>
 
           <div className="flex flex-col gap-6">
-            <div className="overflow-hidden border border-charcoal/10 grayscale-[10%]">
+            <div className="overflow-hidden rounded-3xl border border-charcoal/10 grayscale-[10%]">
               <iframe
                 title="מיקום הסטודיו על מפה"
                 src={`https://www.google.com/maps?q=${encodeURIComponent(businessInfo.mapQuery)}&output=embed`}
@@ -127,7 +127,7 @@ export default function Contact() {
               />
             </div>
 
-            <div className="grid grid-cols-2 gap-6 border border-gold/20 bg-charcoal p-6">
+            <div className="grid grid-cols-2 gap-6 rounded-3xl border border-gold/20 bg-charcoal p-6">
               <div>
                 <p className="text-xs tracking-widest text-gold">כתובת</p>
                 <p className="mt-2 text-sm text-cream-dim">{businessInfo.address}</p>

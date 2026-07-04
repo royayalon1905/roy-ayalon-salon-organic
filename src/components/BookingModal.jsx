@@ -140,7 +140,7 @@ export default function BookingModal({ isOpen, onClose, initialServiceId, initia
         aria-labelledby="booking-modal-title"
         tabIndex={-1}
         onClick={(e) => e.stopPropagation()}
-        className="flex max-h-[90vh] w-full max-w-md flex-col overflow-hidden rounded-2xl bg-cream shadow-2xl outline-none"
+        className="flex max-h-[90vh] w-full max-w-md flex-col overflow-hidden rounded-3xl bg-cream shadow-2xl outline-none"
       >
         <div className="flex items-center justify-between border-b border-charcoal/10 px-5 py-4">
           {!done && step > 0 ? (
@@ -190,7 +190,7 @@ export default function BookingModal({ isOpen, onClose, initialServiceId, initia
                         role="radio"
                         aria-checked={serviceId === s.id}
                         onClick={() => setServiceId(s.id)}
-                        className={`flex w-full items-center justify-between border bg-white px-4 py-3 text-right transition-colors ${
+                        className={`flex w-full items-center justify-between rounded-2xl border bg-white px-4 py-3 text-right transition-colors ${
                           serviceId === s.id ? 'border-gold ring-1 ring-gold' : 'border-charcoal/10 hover:border-gold/50'
                         }`}
                       >
@@ -214,7 +214,7 @@ export default function BookingModal({ isOpen, onClose, initialServiceId, initia
                         role="radio"
                         aria-checked={barberId === b.id}
                         onClick={() => setBarberId(b.id)}
-                        className={`flex w-full items-center gap-4 border bg-white px-4 py-3 text-right transition-colors ${
+                        className={`flex w-full items-center gap-4 rounded-2xl border bg-white px-4 py-3 text-right transition-colors ${
                           barberId === b.id ? 'border-gold ring-1 ring-gold' : 'border-charcoal/10 hover:border-gold/50'
                         }`}
                       >
@@ -245,7 +245,7 @@ export default function BookingModal({ isOpen, onClose, initialServiceId, initia
                           setDate(d.key)
                           setTime(null)
                         }}
-                        className={`flex shrink-0 flex-col items-center gap-1 border bg-white px-3.5 py-2.5 transition-colors ${
+                        className={`flex shrink-0 flex-col items-center gap-1 rounded-2xl border bg-white px-3.5 py-2.5 transition-colors ${
                           date === d.key ? 'border-gold bg-charcoal' : 'border-charcoal/10 hover:border-gold/50'
                         }`}
                       >
@@ -267,7 +267,7 @@ export default function BookingModal({ isOpen, onClose, initialServiceId, initia
                           aria-checked={time === t}
                           disabled={!date || isBooked}
                           onClick={() => setTime(t)}
-                          className={`relative border py-2 text-sm transition-colors disabled:cursor-not-allowed ${
+                          className={`relative rounded-xl border py-2 text-sm transition-colors disabled:cursor-not-allowed ${
                             isBooked
                               ? 'border-charcoal/5 bg-charcoal/5 text-stone/50 line-through'
                               : time === t
@@ -288,7 +288,7 @@ export default function BookingModal({ isOpen, onClose, initialServiceId, initia
                 <div className="flex flex-col gap-4">
                   <div className="flex flex-col gap-1.5">
                     <label htmlFor={nameId} className="text-sm text-stone">שם מלא</label>
-                    <div className="flex items-center gap-2 border border-charcoal/15 bg-white px-3 py-2.5 focus-within:border-gold">
+                    <div className="flex items-center gap-2 rounded-xl border border-charcoal/15 bg-white px-3 py-2.5 focus-within:border-gold">
                       <UserIcon />
                       <input
                         id={nameId}
@@ -304,7 +304,7 @@ export default function BookingModal({ isOpen, onClose, initialServiceId, initia
 
                   <div className="flex flex-col gap-1.5">
                     <label htmlFor={phoneId} className="text-sm text-stone">טלפון נייד</label>
-                    <div className={`flex items-center gap-2 border bg-white px-3 py-2.5 focus-within:border-gold ${phoneError ? 'border-burgundy' : 'border-charcoal/15'}`}>
+                    <div className={`flex items-center gap-2 rounded-xl border bg-white px-3 py-2.5 focus-within:border-gold ${phoneError ? 'border-burgundy' : 'border-charcoal/15'}`}>
                       <PhoneIcon />
                       <input
                         id={phoneId}
@@ -334,7 +334,7 @@ export default function BookingModal({ isOpen, onClose, initialServiceId, initia
                     מעדכנים אותי במבצעים ותזכורות לתור
                   </label>
 
-                  <div className="border border-charcoal/10 bg-white p-4 text-sm text-charcoal/80">
+                  <div className="rounded-2xl border border-charcoal/10 bg-white p-4 text-sm text-charcoal/80">
                     <p className="mb-1 font-semibold text-charcoal">סיכום ההזמנה</p>
                     <p>{service?.title} · {barber?.name}</p>
                     <p>{dateInfo ? `יום ${dateInfo.dayName}, ${dateInfo.dayNum} ל${dateInfo.monthName}` : ''} בשעה {time}</p>
@@ -346,7 +346,7 @@ export default function BookingModal({ isOpen, onClose, initialServiceId, initia
                 type="button"
                 onClick={goNext}
                 disabled={!canNext[step]}
-                className="mt-6 w-full bg-gold py-3.5 text-sm font-bold text-charcoal transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0"
+                className="mt-6 w-full rounded-3xl bg-gold py-3.5 text-sm font-bold text-charcoal transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0"
               >
                 {step === 3 ? 'אישור הזמנה' : 'המשך'}
               </button>
@@ -375,14 +375,14 @@ function ConfirmationView({ service, barber, dateInfo, time, name, onReset, onCl
         <button
           type="button"
           onClick={onReset}
-          className="flex-1 border border-gold py-3 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-charcoal"
+          className="flex-1 rounded-3xl border border-gold py-3 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-charcoal"
         >
           תור נוסף
         </button>
         <button
           type="button"
           onClick={onClose}
-          className="flex-1 bg-charcoal py-3 text-sm font-semibold text-cream transition-colors hover:opacity-90"
+          className="flex-1 rounded-3xl bg-charcoal py-3 text-sm font-semibold text-cream transition-colors hover:opacity-90"
         >
           סגירה
         </button>

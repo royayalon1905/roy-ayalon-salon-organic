@@ -56,7 +56,7 @@ export default function Navbar() {
 
         <a
           href="#services"
-          className="hidden rounded-none border border-charcoal px-5 py-2 text-sm font-semibold text-charcoal transition-colors hover:bg-charcoal hover:text-cream md:inline-block"
+          className="hidden rounded-3xl border border-charcoal px-5 py-2 text-sm font-semibold text-charcoal transition-colors hover:bg-charcoal hover:text-cream md:inline-block"
         >
           קבעו תור
         </a>
@@ -97,7 +97,7 @@ export default function Navbar() {
             <a
               href="#services"
               onClick={() => setOpen(false)}
-              className="mt-2 block border border-charcoal px-5 py-2 text-center text-sm font-semibold text-charcoal"
+              className="mt-2 block rounded-3xl border border-charcoal px-5 py-2 text-center text-sm font-semibold text-charcoal"
             >
               קבעו תור
             </a>
