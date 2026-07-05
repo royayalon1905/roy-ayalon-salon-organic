@@ -115,7 +115,7 @@ export const siteConfig = {
       display: "'David Libre', serif",
       body: "'Assistant', sans-serif",
     },
-    heroImage: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1920&h=1280&fit=crop&auto=format&q=80',
-    heroImageAlt: 'פנים הסטודיו - כיסאות עיצוב שיער וסביבת עבודה',
+    heroImage: 'https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=1920&h=1280&fit=crop&auto=format&q=80',
+    heroImageAlt: 'מרחב ספא רגוע עם צמחייה ובריכת מים שקטה',
   },
 }

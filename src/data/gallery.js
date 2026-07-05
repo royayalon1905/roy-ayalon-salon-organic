@@ -1,27 +1,27 @@
 export const gallery = [
   {
     id: 1,
-    caption: 'גוון חדש',
-    image: 'https://images.unsplash.com/photo-1554519515-242161756769?w=480&h=480&fit=crop&auto=format&q=80',
+    caption: 'עיסוי רקמות עמוק',
+    image: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=480&h=480&fit=crop&auto=format&q=80',
   },
   {
     id: 2,
-    caption: 'בליאז׳ טבעי',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=480&h=480&fit=crop&auto=format&q=80',
+    caption: 'טיפול פנים אורגני',
+    image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=480&h=480&fit=crop&auto=format&q=80',
   },
   {
     id: 3,
-    caption: 'שיער חלק ובריא',
-    image: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=480&h=480&fit=crop&auto=format&q=80',
+    caption: 'עיסוי אבנים חמות',
+    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=480&h=480&fit=crop&auto=format&q=80',
   },
   {
     id: 4,
-    caption: 'תספורת נשית',
-    image: 'https://images.unsplash.com/photo-1522336572468-97b06e8ef143?w=480&h=480&fit=crop&auto=format&q=80',
+    caption: 'פינוק בשמן ארגן',
+    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=480&h=480&fit=crop&auto=format&q=80',
   },
   {
     id: 5,
-    caption: 'תספורת גברים',
-    image: 'https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=480&h=480&fit=crop&auto=format&q=80',
+    caption: 'רגע של רוגע',
+    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=480&h=480&fit=crop&auto=format&q=80',
   },
 ]
