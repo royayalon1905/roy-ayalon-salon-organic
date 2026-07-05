@@ -1,6 +1,8 @@
 import { gallery } from '../data/gallery'
 import RazorReveal from './RazorReveal'
 
+const ASPECTS = ['aspect-[3/4]', 'aspect-square', 'aspect-[4/5]', 'aspect-square', 'aspect-[3/4]']
+
 export default function Gallery() {
   return (
     <section id="gallery" className="border-y border-charcoal/10 bg-cream py-24">
@@ -10,11 +12,11 @@ export default function Gallery() {
           כל תמונה מדברת בעד עצמה
         </RazorReveal>
 
-        <div className="mt-12 flex gap-4 overflow-x-auto pb-2 snap-x snap-mandatory sm:grid sm:grid-cols-5 sm:gap-4 sm:overflow-visible sm:pb-0">
-          {gallery.map((g) => (
+        <div className="mt-12 columns-2 gap-4 sm:columns-3 lg:columns-4">
+          {gallery.map((g, i) => (
             <figure
               key={g.id}
-              className="relative aspect-square w-[70vw] max-w-[280px] shrink-0 snap-center overflow-hidden rounded-lg border border-charcoal/10 sm:w-auto sm:max-w-none"
+              className={`relative mb-4 break-inside-avoid overflow-hidden rounded-lg border border-charcoal/10 ${ASPECTS[i % ASPECTS.length]}`}
             >
               <img
                 src={g.image}

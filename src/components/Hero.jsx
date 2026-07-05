@@ -1,55 +1,47 @@
-import RazorReveal from './RazorReveal'
 import { siteConfig } from '../config/siteConfig'
 
 const { businessInfo, theme } = siteConfig
 
 export default function Hero() {
   return (
-    <section id="top" className="relative flex min-h-screen flex-col justify-center overflow-hidden" aria-label="כותרת ראשית">
-      <img
-        src={theme.heroImage}
-        alt={theme.heroImageAlt}
-        className="absolute inset-0 h-full w-full object-cover"
-      />
-      <div className="absolute inset-0 bg-charcoal/55" aria-hidden="true" />
+    <section id="top" className="bg-cream px-6 pb-20 pt-32 md:px-10 md:pt-40" aria-label="כותרת ראשית">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <div className="mb-8 flex items-center gap-4">
+            <span className="h-px w-10 bg-burgundy" />
+            <p className="whitespace-nowrap text-sm tracking-[0.25em] text-burgundy">{businessInfo.heroEyebrow}</p>
+          </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-2xl flex-col px-6 py-32 text-center">
-        <div className="mb-8 flex items-center justify-center gap-4 sm:gap-5">
-          <span className="h-px max-w-[45px] flex-1 bg-gold sm:max-w-[75px] lg:max-w-[95px]" />
-          <p className="whitespace-nowrap text-sm tracking-[0.25em] text-gold sm:text-base">{businessInfo.heroEyebrow}</p>
-          <span className="h-px max-w-[45px] flex-1 bg-gold sm:max-w-[75px] lg:max-w-[95px]" />
+          <h1 className="mb-6 font-display text-4xl font-light leading-tight tracking-wide text-charcoal sm:text-5xl lg:text-6xl">
+            {businessInfo.shortName} {businessInfo.category}
+          </h1>
+
+          <p className="mb-10 max-w-md text-lg leading-relaxed text-stone">
+            {businessInfo.heroSubtitle}
+          </p>
+
+          <div className="flex flex-col items-start gap-4 sm:flex-row">
+            <a
+              href="#services"
+              className="flex h-[54px] w-full items-center justify-center rounded-3xl bg-gold px-8 text-sm font-semibold tracking-wide text-charcoal transition-opacity hover:opacity-90 sm:w-auto"
+            >
+              קביעת תור
+            </a>
+            <a
+              href="#services"
+              className="flex h-[54px] w-full items-center justify-center rounded-3xl border-2 border-charcoal/25 px-8 text-sm font-semibold tracking-wide text-charcoal transition-colors hover:bg-charcoal hover:text-cream sm:w-auto"
+            >
+              מחירון שירותים
+            </a>
+          </div>
         </div>
 
-        <RazorReveal as="h1" className="mb-6 overflow-hidden font-display text-4xl font-light leading-tight tracking-wide text-cream sm:text-5xl lg:text-6xl">
-          {businessInfo.shortName} {businessInfo.category}
-        </RazorReveal>
-
-        <RazorReveal delay={140} as="p" className="mb-12 overflow-hidden text-sm font-light tracking-widest text-cream-dim">
-          {businessInfo.heroSubtitle}
-        </RazorReveal>
-
-        <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
-            href="#services"
-            className="flex h-[54px] w-full min-w-[220px] items-center justify-center rounded-3xl bg-gold text-sm font-semibold tracking-wide text-charcoal transition-opacity hover:opacity-90 sm:w-auto"
-          >
-            קביעת תור
-          </a>
-          <a
-            href="#services"
-            className="flex h-[54px] w-full min-w-[220px] items-center justify-center rounded-3xl border-2 border-cream/70 text-sm font-semibold tracking-wide text-cream transition-all hover:bg-cream hover:text-charcoal sm:w-auto"
-          >
-            מחירון שירותים
-          </a>
-        </div>
-
-        <div className="mt-24 grid grid-cols-3 gap-4 border-t border-cream/20 pt-10">
-          {businessInfo.stats.map(({ num, label }) => (
-            <div key={label} className="text-center">
-              <p className="font-display text-2xl font-light text-gold">{num}</p>
-              <p className="mt-2 text-sm text-cream-dim">{label}</p>
-            </div>
-          ))}
+        <div className="relative">
+          <img
+            src={theme.heroImage}
+            alt={theme.heroImageAlt}
+            className="aspect-[4/5] w-full rounded-3xl object-cover shadow-xl"
+          />
         </div>
       </div>
     </section>

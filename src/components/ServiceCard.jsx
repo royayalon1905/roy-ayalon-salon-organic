@@ -16,17 +16,16 @@ export default function ServiceCard({ service, onBook }) {
   const badge = BADGE[service.audience]
 
   return (
-    <li className="group relative flex flex-col gap-4 rounded-3xl border border-charcoal/10 bg-white px-6 py-5 transition-colors hover:border-gold hover:shadow-[0_4px_20px_-8px_rgba(201,136,104,0.5)] sm:flex-row sm:items-center sm:justify-between">
-      {badge && (
-        <span
-          className={`absolute -top-2.5 right-5 rounded-full border px-2.5 py-0.5 text-[10px] font-semibold tracking-wide ${badge.className}`}
-        >
-          {badge.label}
-        </span>
-      )}
-
+    <li className="flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between">
       <div>
-        <h3 className="font-display text-lg text-charcoal">{service.title}</h3>
+        <div className="flex items-center gap-2.5">
+          <h3 className="font-display text-lg text-charcoal">{service.title}</h3>
+          {badge && (
+            <span className={`rounded-full border px-2.5 py-0.5 text-[10px] font-semibold tracking-wide ${badge.className}`}>
+              {badge.label}
+            </span>
+          )}
+        </div>
         <p className="mt-1 max-w-md text-sm text-stone">{service.desc}</p>
         <div className="mt-2 flex items-center gap-1.5 text-xs text-stone">
           <ClockIcon />
