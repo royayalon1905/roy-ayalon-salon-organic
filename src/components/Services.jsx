@@ -6,7 +6,12 @@ const { servicesData, staffData } = siteConfig
 
 export default function Services({ onBook }) {
   const [activeId, setActiveId] = useState(staffData[0].id)
-  const filtered = servicesData.filter((s) => s.barberId === activeId)
+  const [viewMode, setViewMode] = useState('all')
+
+  const filtered =
+    viewMode === 'men'
+      ? servicesData.filter((s) => s.audience === 'men')
+      : servicesData.filter((s) => s.barberId === activeId)
 
   return (
     <section id="services" className="bg-cream px-6 py-24 md:px-10 lg:py-32">
@@ -19,34 +24,61 @@ export default function Services({ onBook }) {
           <span className="mx-auto mt-5 block h-px w-16 bg-gold" />
         </div>
 
-        <div role="tablist" aria-label="בחירת מעצב/ת" className="mt-12 flex justify-start gap-2 overflow-x-auto pb-2 sm:justify-center">
-          {staffData.map((b) => {
-            const active = b.id === activeId
-            return (
-              <button
-                key={b.id}
-                type="button"
-                role="tab"
-                aria-selected={active}
-                onClick={() => setActiveId(b.id)}
-                className={`flex shrink-0 items-center gap-2.5 rounded-full border px-3.5 py-2 text-sm transition-colors ${
-                  active
-                    ? 'border-charcoal bg-charcoal text-cream'
-                    : 'border-charcoal/15 bg-white text-charcoal/80 hover:border-gold/60'
-                }`}
-              >
-                <span
-                  className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full font-display text-xs ${
-                    active ? 'bg-gold text-charcoal' : 'bg-charcoal text-gold'
+        <div role="tablist" aria-label="סינון לפי קהל יעד" className="mt-10 flex justify-center gap-2">
+          <button
+            type="button"
+            role="tab"
+            aria-selected={viewMode === 'all'}
+            onClick={() => setViewMode('all')}
+            className={`rounded-full border px-4 py-1.5 text-xs font-semibold tracking-wide transition-colors ${
+              viewMode === 'all' ? 'border-charcoal bg-charcoal text-cream' : 'border-charcoal/15 bg-white text-charcoal/70 hover:border-gold/60'
+            }`}
+          >
+            כל הטיפולים
+          </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={viewMode === 'men'}
+            onClick={() => setViewMode('men')}
+            className={`rounded-full border px-4 py-1.5 text-xs font-semibold tracking-wide transition-colors ${
+              viewMode === 'men' ? 'border-gold bg-gold text-charcoal' : 'border-charcoal/15 bg-white text-charcoal/70 hover:border-gold/60'
+            }`}
+          >
+            טיפולים לגברים
+          </button>
+        </div>
+
+        {viewMode === 'all' && (
+          <div role="tablist" aria-label="בחירת מטפל/ת" className="mt-6 flex justify-start gap-2 overflow-x-auto pb-2 sm:justify-center">
+            {staffData.map((b) => {
+              const active = b.id === activeId
+              return (
+                <button
+                  key={b.id}
+                  type="button"
+                  role="tab"
+                  aria-selected={active}
+                  onClick={() => setActiveId(b.id)}
+                  className={`flex shrink-0 items-center gap-2.5 rounded-full border px-3.5 py-2 text-sm transition-colors ${
+                    active
+                      ? 'border-charcoal bg-charcoal text-cream'
+                      : 'border-charcoal/15 bg-white text-charcoal/80 hover:border-gold/60'
                   }`}
                 >
-                  {b.name.charAt(0)}
-                </span>
-                {b.name}
-              </button>
-            )
-          })}
-        </div>
+                  <span
+                    className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full font-display text-xs ${
+                      active ? 'bg-gold text-charcoal' : 'bg-charcoal text-gold'
+                    }`}
+                  >
+                    {b.name.charAt(0)}
+                  </span>
+                  {b.name}
+                </button>
+              )
+            })}
+          </div>
+        )}
 
         <ul className="mt-8 space-y-4">
           {filtered.map((s) => (
