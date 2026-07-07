@@ -4,15 +4,13 @@
   --font-display: "David Libre", serif;
   --font-body: "Assistant", sans-serif;
 
-  --color-charcoal: #3f4438;
-  --color-charcoal-light: #4c5142;
-  --color-cream: #faf6ec;
-  --color-cream-dim: #f1e8d6;
-  --color-copper: #c3a78c;
-  --color-copper-light: #d8c7b0;
-  --color-gold: #c98868;
-  --color-burgundy: #5c6b42;
-  --color-stone: #8b8272;
+  --color-ink: #3f4438;
+  --color-ink-light: #4c5142;
+  --color-surface: #faf6ec;
+  --color-surface-dim: #f1e8d6;
+  --color-primary: #c98868;
+  --color-accent: #5c6b42;
+  --color-muted: #8b8272;
 }
 
 @layer base {
@@ -30,14 +28,14 @@
   }
 
   html {
-    background: var(--color-cream);
+    background: var(--color-surface);
   }
 
   body {
     margin: 0;
     font-family: var(--font-body);
-    background: var(--color-cream);
-    color: var(--color-charcoal);
+    background: var(--color-surface);
+    color: var(--color-ink);
     -webkit-font-smoothing: antialiased;
   }
 
@@ -46,12 +44,12 @@
   }
 
   ::selection {
-    background: var(--color-gold);
-    color: var(--color-charcoal);
+    background: var(--color-primary);
+    color: var(--color-ink);
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-gold);
+    outline: 2px solid var(--color-primary);
     outline-offset: 3px;
   }
 }

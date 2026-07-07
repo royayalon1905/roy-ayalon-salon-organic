@@ -26,6 +26,126 @@ export const siteConfig = {
     ],
   },
 
+  nav: {
+    ariaLabel: 'ניווט ראשי',
+    links: [
+      { href: '#services', label: 'שירותים' },
+      { href: '#gallery', label: 'עבודות' },
+      { href: '#testimonials', label: 'לקוחות ממליצות' },
+      { href: '#contact', label: 'צור קשר' },
+    ],
+    bookCta: 'קבעו תור',
+    menuOpenLabel: 'פתיחת תפריט',
+    menuCloseLabel: 'סגירת תפריט',
+  },
+
+  content: {
+    skipToMain: 'דלגו לתוכן הראשי',
+    floatingCta: 'קביעת תור',
+    hero: {
+      ariaLabel: 'כותרת ראשית',
+      ctaBook: 'קביעת תור',
+      ctaPrices: 'מחירון שירותים',
+    },
+    team: {
+      eyebrow: 'הצוות שלנו',
+      title: 'מי מטפל/ת בך',
+      ariaLabel: 'בחירת מטפל/ת',
+    },
+    services: {
+      eyebrow: 'מה אנחנו מציעים',
+      title: 'מחירון שירותים',
+      filterLabel: 'סינון לפי קהל יעד',
+      filterAll: 'כל הטיפולים',
+      filterMen: 'טיפולים לגברים',
+    },
+    serviceCard: {
+      bookLabel: 'להזמנה',
+      badges: { women: 'נשים', men: 'גברים' },
+    },
+    gallery: {
+      eyebrow: 'תיק עבודות',
+      title: 'כל תמונה מדברת בעד עצמה',
+    },
+    about: {
+      eyebrow: 'הסיפור שלנו',
+      title: 'כל שיער מספר סיפור אחר',
+      paragraphs: [
+        'מה שהתחיל ב־{year} כחדר קטן בשינקין, הפך לכתובת שאליה מגיעים כשרוצים שינוי אמיתי - גוון חדש, אורך אחר, או פשוט מישהי שבאמת מקשיבה לפני שהיא נוגעת בשיער שלך. בלי פשרות על התוצאה, בלי חיפזון בדרך אליה.',
+        'הצוות שלנו מתמחה בצבע ובליאז׳, החלקות, ותספורות שנבנות לפי מבנה הפנים והאישיות שלך - לא לפי תמונה שהבאת מאינסטגרם.',
+      ],
+      foundedNote: 'השנה בה הכל התחיל',
+    },
+    testimonials: {
+      eyebrow: 'לקוחות ממליצות',
+      title: 'מה שאומרים עלינו',
+      prevLabel: 'ביקורת קודמת',
+      nextLabel: 'ביקורת הבאה',
+    },
+    contact: {
+      eyebrow: 'בואו לבקר',
+      title: 'יש שאלה? בואו נדבר',
+      form: {
+        nameLabel: 'שם',
+        namePlaceholder: 'השם שלך',
+        nameError: 'נא למלא שם',
+        contactLabel: 'טלפון או אימייל',
+        contactPlaceholder: '0501234567 או you@example.com',
+        contactError: 'נא להזין טלפון או אימייל תקין',
+        messageLabel: 'הודעה',
+        messagePlaceholder: 'איך נוכל לעזור?',
+        messageError: 'נא לכתוב הודעה קצרה',
+        submitLabel: 'שליחת הודעה',
+        sentTitle: 'ההודעה נשלחה',
+        sentBody: 'נחזור אליכם בהקדם. תודה שפניתם אלינו.',
+        sendAnotherLabel: 'שליחת הודעה נוספת',
+      },
+      info: {
+        mapTitle: 'מיקום הסטודיו על מפה',
+        addressLabel: 'כתובת',
+        phoneLabel: 'טלפון',
+        hoursLabel: 'שעות פתיחה',
+      },
+    },
+    booking: {
+      title: 'קביעת תור',
+      doneTitle: 'התור נקבע',
+      backLabel: 'חזרה',
+      closeLabel: 'סגירה',
+      serviceStepLabel: 'בחירת שירות',
+      staffStepLabel: 'בחירת ספר/ית',
+      dateStepLabel: 'בחירת תאריך',
+      timeStepLabel: 'בחירת שעה',
+      todayLabel: 'היום',
+      bookedLabel: 'תפוס',
+      pickDateHint: 'בחרו תאריך כדי לראות שעות פנויות',
+      nameLabel: 'שם מלא',
+      namePlaceholder: 'ישראל ישראלי',
+      phoneLabel: 'טלפון נייד',
+      phonePlaceholder: '0501234567',
+      phoneError: 'מספר טלפון לא תקין — נסו לדוגמה 0501234567',
+      consentLabel: 'מעדכנים אותי במבצעים ותזכורות לתור',
+      summaryTitle: 'סיכום ההזמנה',
+      nextLabel: 'המשך',
+      confirmLabel: 'אישור הזמנה',
+      dateTimeSummary: 'יום {day}, {date} ל{month} בשעה {time}',
+      confirmation: {
+        greeting: 'מחכים לך, {name}',
+        summary: '{service} עם {barber} — יום {day}, {date} ל{month} בשעה {time}.',
+        demoNote: 'זהו דמו — לא נשלח אישור אמיתי.',
+        anotherLabel: 'תור נוסף',
+        closeLabel: 'סגירה',
+      },
+    },
+    footer: {
+      quickNavTitle: 'ניווט מהיר',
+      bookingLinkLabel: 'הזמנת תור',
+      socialTitle: 'עקבו אחרינו',
+      rightsNote: 'כל הזכויות שמורות.',
+      demoNote: 'אתר דמו לצורכי הדגמה בלבד',
+    },
+  },
+
   servicesData: [
     {
       id: 'haircut',
@@ -101,15 +221,13 @@ export const siteConfig = {
 
   theme: {
     colors: {
-      charcoal: '#3f4438',
-      charcoalLight: '#4c5142',
-      cream: '#faf6ec',
-      creamDim: '#f1e8d6',
-      copper: '#c3a78c',
-      copperLight: '#d8c7b0',
-      gold: '#c98868',
-      burgundy: '#5c6b42',
-      stone: '#8b8272',
+      ink: '#3f4438',
+      inkLight: '#4c5142',
+      surface: '#faf6ec',
+      surfaceDim: '#f1e8d6',
+      primary: '#c98868',
+      accent: '#5c6b42',
+      muted: '#8b8272',
     },
     fonts: {
       display: "'David Libre', serif",
@@ -118,4 +236,9 @@ export const siteConfig = {
     heroImage: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1920&h=1280&fit=crop&auto=format&q=80',
     heroImageAlt: 'פנים סלון השיער - חלל חם ונעים',
   },
+}
+
+/** Fill {placeholder} slots in a config template string. */
+export function fmt(template, vars = {}) {
+  return template.replace(/\{(\w+)\}/g, (match, key) => (vars[key] ?? match))
 }
